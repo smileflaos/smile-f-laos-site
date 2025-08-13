@@ -38,31 +38,68 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* Hero */}
+          {/* Hero（背景画像版） */}
       <section id="top" className="relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-40 -left-40 w-[42rem] h-[42rem] blur-3xl rounded-full" style={{ backgroundColor: brand.blue, opacity: 0.12 }} />
-          <div className="absolute -bottom-24 -right-24 w-[36rem] h-[36rem] blur-3xl rounded-full" style={{ backgroundColor: brand.red, opacity: 0.12 }} />
+        {/* 背景画像（フルブリード） */}
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/hero.jpg"
+            alt="Hero background"
+            fill
+            priority
+            className="object-cover"
+          />
+          {/* 読みやすさのための薄い黒グラデーション */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/10" />
         </div>
+
+        {/* ここからは元の内容（motion＋テキスト） */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-24 md:py-32 relative">
-          <motion.h1 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-extrabold leading-tight">
+          <motion.h1
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-6xl font-extrabold leading-tight text-white drop-shadow"
+          >
             {copy.heroTitle}
           </motion.h1>
-          <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}
-            className="mt-6 text-base md:text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl">
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="mt-6 text-base md:text-lg max-w-2xl text-white/90"
+          >
             {copy.heroLead}
           </motion.p>
+
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#projects" className="px-5 py-3 rounded-xl text-white text-sm shadow hover:shadow-md inline-flex items-center gap-2" style={{ backgroundColor: brand.blue }}>
+            <a
+              href="#projects"
+              className="px-5 py-3 rounded-xl text-white text-sm shadow hover:shadow-md inline-flex items-center gap-2"
+              style={{ backgroundColor: brand.blue }}
+            >
               活動を見る <ArrowRight className="w-4 h-4" />
             </a>
-            <a href="#coffee" className="px-5 py-3 rounded-xl ring-1 ring-black/10 text-sm bg-white/70 dark:bg-zinc-900/60 backdrop-blur">
+            <a
+              href="#coffee"
+              className="px-5 py-3 rounded-xl ring-1 ring-white/40 text-sm bg-white/20 backdrop-blur text-white"
+            >
               ラオスコーヒーを知る
             </a>
           </div>
+
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
-            {copy.stats.map((s, i) => (<Stat key={i} {...s} />))}
+            {copy.stats.map((s, i) => (
+              <div
+                key={i}
+                className="rounded-2xl bg-white/80 dark:bg-zinc-900/70 ring-1 ring-black/10 p-6 shadow-sm"
+              >
+                <div className="text-3xl font-semibold text-zinc-900">
+                  {s.value}
+                </div>
+                <div className="mt-1 text-sm text-zinc-600">{s.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
