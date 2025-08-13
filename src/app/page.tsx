@@ -52,7 +52,7 @@ export default function Home() {
         </div>
         <div className="flex-1">
           <Image
-            src="/laostour1.jpg"
+            src="/hero.jpg"
             alt="Hero Image"
             width={600}
             height={400}
