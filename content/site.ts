@@ -6,7 +6,7 @@ export const brand = {
 };
 
 export const links = {
-  instagram: "https://instagram.com/eflao_official",
+  instagram: "https://www.instagram.com/smile_f_laos/",
   x: "https://x.com/eflao_official",
   note: "https://note.com/eflao",
   email: "contact@eflao.example",
