@@ -9,6 +9,7 @@ export default function Home() {
     <div className="min-h-screen text-zinc-900">
       {/* ===== Nav（固定／余白ひろめ） ===== */}
       <header className="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-black/5">
+        <h1 style={{padding:'20px', background:'#ffefef', color:'#d00', textAlign:'center'}}>TEST: EFLAO LIVE CHECK</h1>
         <nav className="max-w-6xl mx-auto h-16 px-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.jpg" alt="Smile F LAOS" width={36} height={36} className="rounded-full" />
