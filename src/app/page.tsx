@@ -9,7 +9,6 @@ export default function Home() {
     <div className="min-h-screen text-zinc-900">
       {/* ===== Nav（固定／余白ひろめ） ===== */}
       <header className="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-black/5">
-        <h1 style={{padding:'20px', background:'#ffefef', color:'#d00', textAlign:'center'}}>TEST: EFLAO LIVE CHECK</h1>
         <nav className="max-w-6xl mx-auto h-16 px-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.jpg" alt="Smile F LAOS" width={36} height={36} className="rounded-full" />
@@ -31,11 +30,8 @@ export default function Home() {
 
       {/* ===== Hero（フルブリード画像＋白カード） ===== */}
       <section className="relative w-full h-[72vh] min-h-[560px]">
-        {/* 背景画像 */}
-        <Image src="/laostour1.jpg" alt="Hero" fill priority className="object-cover" />
-        {/* 上に薄いグラデーション */}
+        <Image src="/hero.jpg" alt="Hero" fill priority className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-black/10" />
-        {/* 中央の白カード */}
         <div className="relative z-10 h-full">
           <div className="max-w-6xl mx-auto h-full px-4 flex items-center">
             <div className="bg-white/95 backdrop-blur rounded-2xl p-8 md:p-10 shadow-lg ring-1 ring-black/10 max-w-2xl">
@@ -52,11 +48,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* 下部の余白演出 */}
         <div className="absolute -bottom-10 left-0 right-0 h-10 bg-gradient-to-b from-transparent to-white" />
       </section>
 
-      {/* ===== 指標カード（ふんわり影） ===== */}
+      {/* ===== 指標カード ===== */}
       <section className="max-w-6xl mx-auto px-4 pt-16 md:pt-24">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {copy.stats.map((s, i) => (
@@ -68,7 +63,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== ミッション（3カラム） ===== */}
+      {/* ===== ミッション ===== */}
       <section id="mission" className="max-w-6xl mx-auto px-4 py-16 md:py-24">
         <div className="mb-6 text-xs font-medium tracking-widest" style={{ color: brand.blue }}>MISSION</div>
         <div className="grid md:grid-cols-3 gap-6">
@@ -86,7 +81,7 @@ export default function Home() {
         {[0,1].map((row) => (
           <div key={row} className={`grid md:grid-cols-2 gap-8 items-center ${row % 2 ? "md:grid-flow-dense" : ""}`}>
             <div className={`relative aspect-[4/3] rounded-2xl overflow-hidden ring-1 ring-black/5 shadow-sm ${row % 2 ? "md:order-2" : ""}`}>
-              <Image src={row ? "/laostour2.jpg" : "/laostour2.jpg"} alt="Project visual" fill className="object-cover" />
+              <Image src={row ? "/section-2.jpg" : "/section-1.jpg"} alt="Project visual" fill className="object-cover" />
             </div>
             <div className={`${row % 2 ? "md:order-1" : ""}`}>
               <div className="text-xs font-medium tracking-widest" style={{ color: brand.green }}>PROJECT</div>
@@ -114,7 +109,7 @@ export default function Home() {
           <p className="mt-2 text-zinc-600">現地と日本の両輪で、挑戦を続けています。</p>
         </div>
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {["/laostour3.jpg","/laostour2.jpg","/laostour1.jpg"].map((src, i) => (
+          {["/gallery1.jpg","/gallery2.jpg","/gallery3.jpg"].map((src, i) => (
             <div key={i} className="relative aspect-[4/3] rounded-2xl overflow-hidden ring-1 ring-black/5 shadow-sm">
               <Image src={src} alt={`Gallery ${i+1}`} fill className="object-cover" />
             </div>
