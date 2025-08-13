@@ -7,7 +7,7 @@ export const brand = {
 
 export const links = {
   instagram: "https://www.instagram.com/smile_f_laos/",
-  x: "https://x.com/smile_f_laosl",
+  x: "https://x.com/smile_f_laos",
   note: "https://note.com/eflao",
   email: "contact@eflao.example",
 };
