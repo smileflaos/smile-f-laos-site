@@ -81,7 +81,7 @@ export default function Home() {
         {[0,1].map((row) => (
           <div key={row} className={`grid md:grid-cols-2 gap-8 items-center ${row % 2 ? "md:grid-flow-dense" : ""}`}>
             <div className={`relative aspect-[4/3] rounded-2xl overflow-hidden ring-1 ring-black/5 shadow-sm ${row % 2 ? "md:order-2" : ""}`}>
-              <Image src={row ? "/section-2.jpg" : "/section-1.jpg"} alt="Project visual" fill className="object-cover" />
+              <Image src={row ? "/laostour1.jpg" : "/laostour2.jpg"} alt="Project visual" fill className="object-cover" />
             </div>
             <div className={`${row % 2 ? "md:order-1" : ""}`}>
               <div className="text-xs font-medium tracking-widest" style={{ color: brand.green }}>PROJECT</div>
@@ -109,7 +109,7 @@ export default function Home() {
           <p className="mt-2 text-zinc-600">現地と日本の両輪で、挑戦を続けています。</p>
         </div>
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {["/gallery1.jpg","/gallery2.jpg","/gallery3.jpg"].map((src, i) => (
+          {["/laostour1.jpg","/laostour2.jpg","/laostour3.jpg"].map((src, i) => (
             <div key={i} className="relative aspect-[4/3] rounded-2xl overflow-hidden ring-1 ring-black/5 shadow-sm">
               <Image src={src} alt={`Gallery ${i+1}`} fill className="object-cover" />
             </div>
