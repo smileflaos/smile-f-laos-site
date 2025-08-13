@@ -9,7 +9,7 @@ export const links = {
   instagram: "https://www.instagram.com/smile_f_laos/",
   x: "https://x.com/smile_f_laos",
   note: "https://note.com/eflao",
-  email: "contact@eflao.example",
+  email: "toyo.coffee@gmail.com",
 };
 
 export const copy = {
