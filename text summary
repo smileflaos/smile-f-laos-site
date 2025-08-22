@@ -48,6 +48,6 @@ export const copy = {
     { day: "DAY 3", title: "生産地へ移動", point: "コーヒー農家訪問、精選工程の見学" },
     { day: "DAY 4", title: "協働作業", point: "軽微な整備/ワークショップ実施" },
     { day: "DAY 5", title: "販売の現場を知る", point: "市場/カフェ視察、価格・付加価値の学び" },
-    { day: "DAY 6-7", title: "ふりかえりと発表", point: "支援案の素案づくり、共有会" },
+    { day: "DAY 100", title: "ふりかえりと発表", point: "支援案の素案づくり、共有会" },
   ],
 };
