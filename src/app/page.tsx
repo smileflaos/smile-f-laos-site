@@ -27,7 +27,7 @@ export default function Home() {
             <span className="font-semibold">エフラオ / Smile F LAOS</span>
           </a>
           <div className="hidden md:flex items-center gap-6 text-sm">
-            <a href="#mission" className="hover:underline">ミッション</a>
+            <a href="#mission" className="hover:underline">Mission</a>
             <a href="#projects" className="hover:underline">プロジェクト</a>
             <a href="#coffee" className="hover:underline">ラオスコーヒー</a>
             <a href="#tour" className="hover:underline">スタディツアー</a>
